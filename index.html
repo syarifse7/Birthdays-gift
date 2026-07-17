@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesuatu Buat Kamu 🎁</title>
+    <meta name="description" content="Kejutan ulang tahun spesial buat kamu!">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Canvas for Particle Effects (Confetti/Fireworks) -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Background Animations -->
+    <div class="stars" id="stars-container"></div>
+    <div class="balloons-bg" id="balloons-container"></div>
+
+    <!-- AUDIO (Optional: add your audio file path here) -->
+    <audio id="bg-music" src="/assets/music/a thousand years - christina perri.mp3" loop>
+        <!-- <source src="your-music-file.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <!-- OPENING SCREEN -->
+    <section id="opening" class="screen active">
+        <div class="glass-panel text-center">
+            <h1 class="glow-text">Eh bentar... 👀</h1>
+            <p>Ada sesuatu nih buat kamu 😆. Jangan buru-buru ya...</p>
+            
+            <div class="gift-container" id="gift-box">
+                <div class="gift">🎁</div>
+                <div class="sparkles">✨</div>
+            </div>
+
+            <button id="btn-open" class="btn-glow">Buka Yuk 🎁</button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT SCREEN -->
+    <section id="main-content" class="screen hidden">
+        <div class="container">
+            
+            <!-- Message Section -->
+            <div class="section glass-card" id="message-section">
+                <h2>Coba baca ini deh... 💌</h2>
+                <div class="typewriter-container">
+                    <p id="typing-text"></p>
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="section" id="gallery-section">
+                <h2>Sedikit memori tentang kita ✨</h2>
+                <div class="gallery-grid">
+                    <!-- Placeholders: Replace with real images -->
+                    <div class="gallery-item"><img src="/assets/images/1000295108.jpeg" alt="Memori 1"></div>
+                    <div class="gallery-item"><img src="/assets/images/image.jpeg" alt="Memori 2"></div>
+                    <div class="gallery-item"><img src="/assets/images/1758387633598.jpg" alt="Memori 3"></div>
+                    <div class="gallery-item"><img src="/assets/images/1000295079.jpeg" alt="Memori 4"></div>
+                </div>
+            </div>
+
+            <!-- Lightbox for Gallery -->
+            <div id="lightbox" class="lightbox hidden">
+                <span class="close-lightbox">&times;</span>
+                <img class="lightbox-content" id="lightbox-img">
+            </div>
+
+            <!-- Countdown Section -->
+            <div class="section glass-card text-center" id="countdown-section">
+                <h2>Momen spesialnya di mulai dalam... ⏳</h2>
+                <div class="countdown" id="countdown">
+                    <div class="time-box"><span id="hours">00</span><small>Jam</small></div>
+                    <div class="time-box"><span id="minutes">00</span><small>Menit</small></div>
+                    <div class="time-box"><span id="seconds">00</span><small>Detik</small></div>
+                </div>
+            </div>
+
+            <!-- Wishes Section -->
+            <div class="section" id="wishes-section">
+                <h2>Harapan buat kamu 🌟</h2>
+                <div class="wishes-grid">
+                    <div class="glass-card wish-card">Semoga hari ini penuh senyum ya. 😊</div>
+                    <div class="glass-card wish-card">Semoga semua yang kamu impikan pelan-pelan jadi kenyataan. 💫</div>
+                    <div class="glass-card wish-card">Tetap jadi orang baik dan bahagia terus! 🥳</div>
+                </div>
+            </div>
+
+            <!-- Cake Section -->
+            <div class="section glass-card text-center" id="cake-section">
+                <h2>Siap? 😁 Waktunya tiup lilin!</h2>
+                <div class="cake-container">
+                    <div class="cake">
+                        🎂
+                        <div class="flame" id="flame"></div>
+                    </div>
+                </div>
+                <button id="btn-blow" class="btn-glow mt-4">Tiup Lilinnya 💨</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL CELEBRATION SCREEN -->
+    <section id="final-screen" class="screen hidden">
+        <div class="celebration-content text-center">
+            <h1 class="glow-text huge-text">Selamat Ulang Tahun! 🎉</h1>
+            <p class="mt-4">Bahagia selalu ya! Hari ini milik kamu. 💖</p>
+            <div class="floating-hearts" id="hearts-container"></div>
+            <button id="btn-replay" class="btn-glow mt-4">Mau Lihat Lagi? 😁</button>
+        </div>
+    </section>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

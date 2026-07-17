@@ -257,18 +257,3 @@ document.addEventListener("DOMContentLoaded", () => {
     animateParticles();
 });
 
-
-// volume up Audio
-
-const audio = document.querySelector("audio");
-
-const audioContext = new AudioContext();
-const source = audioContext.createMediaElementSource(audio);
-const gainNode = audioContext.createGain();
-
-source.connect(gainNode);
-gainNode.connect(audioContext.destination);
-
-// 2 = 200%
-// 3 = 300%
-gainNode.gain.value = 3;
